@@ -26,3 +26,10 @@ cd atjastip
 pnpm install
 ```
 > Edit the Vite script inside /src
+
+**3. Run the Local server**
+
+> Run the localhost server
+```
+pnpm run dev
+```
