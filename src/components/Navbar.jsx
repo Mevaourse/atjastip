@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-
+import logo from '../assets/img/at-jastip-logo.png'
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -15,15 +15,15 @@ export default function Navbar() {
       ]
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+        <header className="fixed inset-x-0 backdrop-blur-sm bg-white/30 top-0 z-50">
+        <nav aria-label="Global" className="flex items-center justify-between p-2 lg:px-8">
           <div className="flex">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <a href="#" className="mx-1.5 px-1.5">
+              <span className="sr-only">AT Jastip</span>
               <img
                 alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                src={ logo }
+                className="h-auto w-12 sm:w-12"
               />
             </a>
           </div>
