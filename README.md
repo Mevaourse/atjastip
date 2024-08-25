@@ -1,6 +1,9 @@
 > [!NOTE]
 > This Project is using [pnpm package](https://pnpm.io/)
 
+>[!NOTE]
+>This Project using Tailwind CSS for Styles 
+
 # Install pnpm package for Vite
 
 **1. If pnpm it's not installed, First install pnpm in your device**
