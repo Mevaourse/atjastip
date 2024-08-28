@@ -1,18 +1,20 @@
+import Navbar from '../components/Navbar';
 import '../assets/atjatip-module.css';
 
 export default function Example() {
 
   return (
     <>
-        <div className="background mx-0 overflow-y-hidden">
-            <div className="relativ isolate px-6 pt-14 lg:px-8">
+        <Navbar />
+        <div className="background mx-0 h-[100vh] overflow-y-hidden">
+            <div className="relativ isolate px-8 pt-14 lg:px-8">
                 <div
                 aria-hidden="true"
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 >
                 </div>
-                <div className="mx-auto max-w-2xl py-15  sm:py-40">
-                <div className="text-center py-5 backdrop-blur-xl bg-white/30 rounded-2xl">
+                <div className="mx-auto w-[70%] py-15 sm:py-40">
+                <div className="text-center px-16 py-5 backdrop-blur-xl bg-white/30 rounded-2xl">
                     <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                     ATJastip
                     </h1>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -8,24 +9,24 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     const navigation = [
-        { name: 'About Us', href: '#' },
-        { name: 'Testimonials', href: '#' },
-        { name: 'Contact Us', href: '#' },
-        { name: 'Links', href: '#' },
-      ]
+        { name: 'About Us', href: '/about' },
+        { name: 'Testimonials', href: '/Testimonials' },
+        { name: 'Contact Us', href: '/Contact' },
+        { name: 'Links', href: '/' },
+      ] 
 
     return (
         <header className="fixed inset-x-0 backdrop-blur-sm bg-white/30 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-2 lg:px-8">
+        <nav aria-label="Global" className="flex items-center justify-between p-2 lg:px-8 shadow-lg">
           <div className="flex">
-            <a href="#" className="mx-1.5 px-1.5">
+            <Link to="/" className="mx-1.5 px-1.5">
               <span className="sr-only">AT Jastip</span>
               <img
                 alt=""
                 src={ logo }
                 className="h-auto w-12 sm:w-12"
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -39,9 +40,9 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:flex justify-content-center lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <Link key={item.name} to={item.href} className="text-sm font-semibold leading-6 border-b-2 border-transparent hover:border-b-2 hover:border-gray-500 hover:text-gray-500 transition duration-200 text-gray-900">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
@@ -49,14 +50,14 @@ export default function Navbar() {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <Link to="" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   className="h-8 w-auto"
                 />
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -73,7 +74,7 @@ export default function Navbar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:border-b-2 hover:text-gray-700 transition duration-100 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
