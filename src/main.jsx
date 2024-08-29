@@ -2,13 +2,13 @@ import { createRoot } from 'react-dom/client'
 import { 
   createBrowserRouter,
   RouterProvider,
-  Router,
  } from 'react-router-dom';
 
 
 import Landingpage from './pages/Landingpage.jsx';
 import ErrorPage from './ErrorPage.jsx';
 import AboutPage from './pages/About.jsx';
+import TestimonialsPage from './pages/TestimonialsPage.jsx';
 import './assets/index.css'
 
 const router = createBrowserRouter([
@@ -17,11 +17,11 @@ const router = createBrowserRouter([
     element: <Landingpage />,
     errorElement: <ErrorPage />
   },
-  /* {
-    path: 'home',
-    element: <Homepage />,
+  {
+    path: 'testimonials',
+    element: <TestimonialsPage />,
     errorElement: <ErrorPage />
-  }, */
+  },
   {
     path: 'about',
     element: <AboutPage />,
